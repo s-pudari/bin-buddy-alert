@@ -82,10 +82,10 @@ const BinLevelGauge: React.FC<BinLevelGaugeProps> = ({
             </span>
           </div>
           
+          {/* Fixed Progress component usage by removing the indicatorClassName prop */}
           <Progress 
             value={fillPercentage} 
-            className="h-3"
-            indicatorClassName={getColor(fillPercentage)}
+            className={cn("h-3", getColor(fillPercentage))}
           />
           
           <div className="flex justify-between text-sm text-gray-500">
